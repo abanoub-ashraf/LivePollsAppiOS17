@@ -130,5 +130,7 @@ iOSInjectionProject/
 
 ## App Exceptions ##
 GoogleService-Info.plist
+*.p8
+secretConsts.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/swiftpm

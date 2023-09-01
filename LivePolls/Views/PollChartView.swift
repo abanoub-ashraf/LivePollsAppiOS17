@@ -28,7 +28,7 @@ struct PollChartView: View {
                     ///
                     angularInset: 1.5
                 )
-                .cornerRadius(8)
+                .cornerRadius(5)
                 .foregroundStyle(by: .value("Name", option.name))
             }
         }

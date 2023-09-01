@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		C84E01902AA23B0B000AF21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E018F2AA23B0B000AF21D /* AppDelegate.swift */; };
 		C84E01922AA23B66000AF21D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E01912AA23B66000AF21D /* StringExtensions.swift */; };
+		C84E01B52AA240AA000AF21D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84E01982AA23F51000AF21D /* WidgetKit.framework */; };
+		C84E01B62AA240AA000AF21D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84E019A2AA23F51000AF21D /* SwiftUI.framework */; };
+		C84E01B92AA240AA000AF21D /* LivePollsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E01B82AA240AA000AF21D /* LivePollsWidgetBundle.swift */; };
+		C84E01BB2AA240AA000AF21D /* LivePollsWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E01BA2AA240AA000AF21D /* LivePollsWidgetLiveActivity.swift */; };
+		C84E01BF2AA240AC000AF21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C84E01BE2AA240AC000AF21D /* Assets.xcassets */; };
+		C84E01C32AA240AC000AF21D /* LivePollsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C84E01B42AA240AA000AF21D /* LivePollsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C84E01C82AA240CB000AF21D /* LivePollsWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E01C72AA240CB000AF21D /* LivePollsWidgetAttributes.swift */; };
+		C84E01C92AA240CB000AF21D /* LivePollsWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E01C72AA240CB000AF21D /* LivePollsWidgetAttributes.swift */; };
+		C84E01CA2AA24126000AF21D /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89465E02AA114AA00F504F6 /* Option.swift */; };
+		C84E01CB2AA24126000AF21D /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89465E22AA1153E00F504F6 /* Poll.swift */; };
+		C84E01CD2AA248FB000AF21D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C84E01CC2AA248FB000AF21D /* FirebaseFirestore */; };
+		C84E01CF2AA248FB000AF21D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C84E01CE2AA248FB000AF21D /* FirebaseFirestoreSwift */; };
+		C84E01D12AA24E57000AF21D /* PollChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89465EA2AA1214600F504F6 /* PollChartView.swift */; };
 		C85B75F22AA0EED3005F9D68 /* LivePollsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B75F12AA0EED3005F9D68 /* LivePollsApp.swift */; };
 		C85B75F62AA0EED5005F9D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85B75F52AA0EED5005F9D68 /* Assets.xcassets */; };
 		C85B75F92AA0EED5005F9D68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85B75F82AA0EED5005F9D68 /* Preview Assets.xcassets */; };
@@ -24,9 +37,42 @@
 		C89465EF2AA226DB00F504F6 /* PollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89465EE2AA226DB00F504F6 /* PollViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C84E01C12AA240AC000AF21D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C85B75E62AA0EED3005F9D68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C84E01B32AA240AA000AF21D;
+			remoteInfo = LivePollsWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C84E01AC2AA23F54000AF21D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C84E01C32AA240AC000AF21D /* LivePollsWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C84E018F2AA23B0B000AF21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C84E01912AA23B66000AF21D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		C84E01982AA23F51000AF21D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C84E019A2AA23F51000AF21D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C84E01B42AA240AA000AF21D /* LivePollsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LivePollsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84E01B82AA240AA000AF21D /* LivePollsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePollsWidgetBundle.swift; sourceTree = "<group>"; };
+		C84E01BA2AA240AA000AF21D /* LivePollsWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePollsWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		C84E01BE2AA240AC000AF21D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C84E01C02AA240AC000AF21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C84E01C72AA240CB000AF21D /* LivePollsWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePollsWidgetAttributes.swift; sourceTree = "<group>"; };
+		C84E01D02AA24BF8000AF21D /* LivePolls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LivePolls.entitlements; sourceTree = "<group>"; };
 		C85B75EE2AA0EED3005F9D68 /* LivePolls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePolls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85B75F12AA0EED3005F9D68 /* LivePollsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePollsApp.swift; sourceTree = "<group>"; };
 		C85B75F52AA0EED5005F9D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +88,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C84E01B12AA240AA000AF21D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84E01B62AA240AA000AF21D /* SwiftUI.framework in Frameworks */,
+				C84E01B52AA240AA000AF21D /* WidgetKit.framework in Frameworks */,
+				C84E01CD2AA248FB000AF21D /* FirebaseFirestore in Frameworks */,
+				C84E01CF2AA248FB000AF21D /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C85B75EB2AA0EED3005F9D68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +111,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C84E01B72AA240AA000AF21D /* LivePollsWidget */ = {
+			isa = PBXGroup;
+			children = (
+				C84E01B82AA240AA000AF21D /* LivePollsWidgetBundle.swift */,
+				C84E01BA2AA240AA000AF21D /* LivePollsWidgetLiveActivity.swift */,
+				C84E01C72AA240CB000AF21D /* LivePollsWidgetAttributes.swift */,
+				C84E01BE2AA240AC000AF21D /* Assets.xcassets */,
+				C84E01C02AA240AC000AF21D /* Info.plist */,
+			);
+			path = LivePollsWidget;
+			sourceTree = "<group>";
+		};
+		C84E01D22AA264B2000AF21D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C84E01912AA23B66000AF21D /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C84E01D32AA264CB000AF21D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C84E018F2AA23B0B000AF21D /* AppDelegate.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		C85B75E52AA0EED3005F9D68 = {
 			isa = PBXGroup;
 			children = (
 				C85B75F02AA0EED3005F9D68 /* LivePolls */,
+				C84E01B72AA240AA000AF21D /* LivePollsWidget */,
 				C85B75EF2AA0EED3005F9D68 /* Products */,
 				C89465DA2AA1068100F504F6 /* Frameworks */,
 			);
@@ -67,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				C85B75EE2AA0EED3005F9D68 /* LivePolls.app */,
+				C84E01B42AA240AA000AF21D /* LivePollsWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +161,9 @@
 		C85B75F02AA0EED3005F9D68 /* LivePolls */ = {
 			isa = PBXGroup;
 			children = (
+				C84E01D02AA24BF8000AF21D /* LivePolls.entitlements */,
+				C84E01D32AA264CB000AF21D /* Config */,
+				C84E01D22AA264B2000AF21D /* Extensions */,
 				C89465E72AA11CCB00F504F6 /* Observables */,
 				C89465E42AA11CB500F504F6 /* Views */,
 				C89465DF2AA1149600F504F6 /* Models */,
@@ -81,8 +171,6 @@
 				C85B75F12AA0EED3005F9D68 /* LivePollsApp.swift */,
 				C85B75F52AA0EED5005F9D68 /* Assets.xcassets */,
 				C85B75F72AA0EED5005F9D68 /* Preview Content */,
-				C84E018F2AA23B0B000AF21D /* AppDelegate.swift */,
-				C84E01912AA23B66000AF21D /* StringExtensions.swift */,
 			);
 			path = LivePolls;
 			sourceTree = "<group>";
@@ -98,6 +186,8 @@
 		C89465DA2AA1068100F504F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C84E01982AA23F51000AF21D /* WidgetKit.framework */,
+				C84E019A2AA23F51000AF21D /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +223,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C84E01B32AA240AA000AF21D /* LivePollsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C84E01C42AA240AC000AF21D /* Build configuration list for PBXNativeTarget "LivePollsWidgetExtension" */;
+			buildPhases = (
+				C84E01B02AA240AA000AF21D /* Sources */,
+				C84E01B12AA240AA000AF21D /* Frameworks */,
+				C84E01B22AA240AA000AF21D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LivePollsWidgetExtension;
+			packageProductDependencies = (
+				C84E01CC2AA248FB000AF21D /* FirebaseFirestore */,
+				C84E01CE2AA248FB000AF21D /* FirebaseFirestoreSwift */,
+			);
+			productName = LivePollsWidgetExtension;
+			productReference = C84E01B42AA240AA000AF21D /* LivePollsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C85B75ED2AA0EED3005F9D68 /* LivePolls */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C85B75FC2AA0EED5005F9D68 /* Build configuration list for PBXNativeTarget "LivePolls" */;
@@ -140,10 +251,12 @@
 				C85B75EA2AA0EED3005F9D68 /* Sources */,
 				C85B75EB2AA0EED3005F9D68 /* Frameworks */,
 				C85B75EC2AA0EED3005F9D68 /* Resources */,
+				C84E01AC2AA23F54000AF21D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C84E01C22AA240AC000AF21D /* PBXTargetDependency */,
 			);
 			name = LivePolls;
 			packageProductDependencies = (
@@ -164,6 +277,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					C84E01B32AA240AA000AF21D = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					C85B75ED2AA0EED3005F9D68 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -186,11 +302,20 @@
 			projectRoot = "";
 			targets = (
 				C85B75ED2AA0EED3005F9D68 /* LivePolls */,
+				C84E01B32AA240AA000AF21D /* LivePollsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C84E01B22AA240AA000AF21D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84E01BF2AA240AC000AF21D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C85B75EC2AA0EED3005F9D68 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +329,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C84E01B02AA240AA000AF21D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C84E01CB2AA24126000AF21D /* Poll.swift in Sources */,
+				C84E01CA2AA24126000AF21D /* Option.swift in Sources */,
+				C84E01B92AA240AA000AF21D /* LivePollsWidgetBundle.swift in Sources */,
+				C84E01BB2AA240AA000AF21D /* LivePollsWidgetLiveActivity.swift in Sources */,
+				C84E01D12AA24E57000AF21D /* PollChartView.swift in Sources */,
+				C84E01C92AA240CB000AF21D /* LivePollsWidgetAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C85B75EA2AA0EED3005F9D68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +354,7 @@
 				C89465E92AA11CE000F504F6 /* HomeViewModel.swift in Sources */,
 				C89465ED2AA226CF00F504F6 /* PollView.swift in Sources */,
 				C89465EB2AA1214600F504F6 /* PollChartView.swift in Sources */,
+				C84E01C82AA240CB000AF21D /* LivePollsWidgetAttributes.swift in Sources */,
 				C89465E62AA11CC200F504F6 /* HomeView.swift in Sources */,
 				C85B75F22AA0EED3005F9D68 /* LivePollsApp.swift in Sources */,
 			);
@@ -223,7 +362,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C84E01C22AA240AC000AF21D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C84E01B32AA240AA000AF21D /* LivePollsWidgetExtension */;
+			targetProxy = C84E01C12AA240AC000AF21D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C84E01C52AA240AC000AF21D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6JX84M9ZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LivePollsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LivePollsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abanoubashraf.LivePolls.LivePollsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C84E01C62AA240AC000AF21D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6JX84M9ZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LivePollsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LivePollsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abanoubashraf.LivePolls.LivePollsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C85B75FA2AA0EED5005F9D68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -346,14 +547,18 @@
 		C85B75FD2AA0EED5005F9D68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LivePolls/LivePolls.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LivePolls/Preview Content\"";
 				DEVELOPMENT_TEAM = U6JX84M9ZS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -375,14 +580,18 @@
 		C85B75FE2AA0EED5005F9D68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LivePolls/LivePolls.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LivePolls/Preview Content\"";
 				DEVELOPMENT_TEAM = U6JX84M9ZS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,6 +613,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C84E01C42AA240AC000AF21D /* Build configuration list for PBXNativeTarget "LivePollsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C84E01C52AA240AC000AF21D /* Debug */,
+				C84E01C62AA240AC000AF21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C85B75E92AA0EED3005F9D68 /* Build configuration list for PBXProject "LivePolls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -436,6 +654,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C84E01CC2AA248FB000AF21D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C89465A72AA1061F00F504F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C84E01CE2AA248FB000AF21D /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C89465A72AA1061F00F504F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		C89465DB2AA1068100F504F6 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C89465A72AA1061F00F504F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

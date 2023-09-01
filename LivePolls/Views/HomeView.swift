@@ -17,6 +17,8 @@ struct HomeView: View {
             createPollsSection
             
             addOptionsSection
+            
+            existingPollSection
         }
         .alert("Error", isPresented: .constant(vm.error != nil)) {
             
@@ -28,7 +30,7 @@ struct HomeView: View {
                 PollView(vm: .init(pollId: id))
             }
         }
-        .navigationTitle("Latest Live Polls")
+        .navigationTitle("Live Polls App")
         .onAppear {
             vm.listenToLivePolls()
         }
@@ -36,7 +38,7 @@ struct HomeView: View {
     
     var livePollsSection: some View {
         Section {
-            DisclosureGroup("Active Polls") {
+            DisclosureGroup("Current Polls") {
                 ForEach(vm.polls) { poll in
                     VStack {
                         HStack {
@@ -109,10 +111,23 @@ struct HomeView: View {
             }
         }
     }
-}
-
-extension String: Identifiable {
-    public var id: Self { self }
+    
+    var existingPollSection: some View {
+        Section {
+            DisclosureGroup("Join a Poll") {
+                TextField("Enter poll id", text: $vm.existingPollId)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
+                
+                Button("Join") {
+                    Task {
+                        await vm.joinExistingPoll()
+                    }
+                }
+                .disabled(vm.isJoinPollButtonDisabled)
+            }
+        }
+    }
 }
 
 #Preview {

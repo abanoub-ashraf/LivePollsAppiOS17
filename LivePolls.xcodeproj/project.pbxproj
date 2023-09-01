@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84E01902AA23B0B000AF21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E018F2AA23B0B000AF21D /* AppDelegate.swift */; };
+		C84E01922AA23B66000AF21D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E01912AA23B66000AF21D /* StringExtensions.swift */; };
 		C85B75F22AA0EED3005F9D68 /* LivePollsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85B75F12AA0EED3005F9D68 /* LivePollsApp.swift */; };
 		C85B75F62AA0EED5005F9D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85B75F52AA0EED5005F9D68 /* Assets.xcassets */; };
 		C85B75F92AA0EED5005F9D68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85B75F82AA0EED5005F9D68 /* Preview Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C84E018F2AA23B0B000AF21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C84E01912AA23B66000AF21D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C85B75EE2AA0EED3005F9D68 /* LivePolls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePolls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85B75F12AA0EED3005F9D68 /* LivePollsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePollsApp.swift; sourceTree = "<group>"; };
 		C85B75F52AA0EED5005F9D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				C85B75F12AA0EED3005F9D68 /* LivePollsApp.swift */,
 				C85B75F52AA0EED5005F9D68 /* Assets.xcassets */,
 				C85B75F72AA0EED5005F9D68 /* Preview Content */,
+				C84E018F2AA23B0B000AF21D /* AppDelegate.swift */,
+				C84E01912AA23B66000AF21D /* StringExtensions.swift */,
 			);
 			path = LivePolls;
 			sourceTree = "<group>";
@@ -204,7 +210,9 @@
 			files = (
 				C89465E32AA1153E00F504F6 /* Poll.swift in Sources */,
 				C89465EF2AA226DB00F504F6 /* PollViewModel.swift in Sources */,
+				C84E01922AA23B66000AF21D /* StringExtensions.swift in Sources */,
 				C89465E12AA114AA00F504F6 /* Option.swift in Sources */,
+				C84E01902AA23B0B000AF21D /* AppDelegate.swift in Sources */,
 				C89465E92AA11CE000F504F6 /* HomeViewModel.swift in Sources */,
 				C89465ED2AA226CF00F504F6 /* PollView.swift in Sources */,
 				C89465EB2AA1214600F504F6 /* PollChartView.swift in Sources */,

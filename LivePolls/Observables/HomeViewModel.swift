@@ -18,6 +18,8 @@ class HomeViewModel {
     
     var modalPollId: String? = nil
     
+    var existingPollId: String = ""
+    
     var error: String? = nil
     
     var newPollName: String = ""
@@ -32,6 +34,10 @@ class HomeViewModel {
     
     var isAddOptionsButtonDisabled: Bool {
         isLoading || newOptionName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || newPollOptions.count == 4
+    }
+    
+    var isJoinPollButtonDisabled: Bool {
+        isLoading || existingPollId.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
     
     @MainActor
@@ -85,5 +91,24 @@ class HomeViewModel {
     func addOption() {
         self.newPollOptions.append(self.newOptionName.trimmingCharacters(in: .whitespacesAndNewlines))
         self.newOptionName = ""
+    }
+    
+    @MainActor
+    func joinExistingPoll() async {
+        isLoading = true
+        
+        defer {
+            isLoading = false
+        }
+        
+        guard 
+            let existingPoll = try? await db.document("polls/\(existingPollId)").getDocument(),
+            existingPoll.exists
+        else {
+            error = "Poll ID: \(existingPollId) doesn't exist"
+            return
+        }
+        
+        modalPollId = existingPollId
     }
 }
